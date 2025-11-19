@@ -1,0 +1,21 @@
+[build]
+  # This tells Netlify to use 'npm run build' to build the app
+  command = "npm run build"
+  
+  # This specifies where to find the build output (the 'build' directory)
+  publish = "build"
+  
+  # Optional: specify the base directory for your build if it's not in the root
+  # base = "my-app"
+
+[dev]
+  # Optional: if you're running a local server with Netlify Dev (useful for local dev)
+  command = "npm start"
+  port = 8000
+
+[[redirects]]
+  # Redirect all URLs that are not found to the index.html for React Router (SPA fallback)
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
